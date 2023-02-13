@@ -1,0 +1,273 @@
+@import "./utils/reset";
+@import "./utils/variables";
+@import "./utils/animations";
+@import "./utils/mixins";
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  margin: 5rem;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba($color: #000000, $alpha: 0.1);
+  @include bigPhone-and-lower {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10px;
+  }
+  .left-side {
+    position: relative;
+    background: #003147;
+    padding: 2rem;
+
+    .profilText {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+
+      h2 {
+        color: #fff;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        span {
+          font-size: 0.8em;
+          font-weight: 300;
+        }
+      }
+      .imgBx {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .contactInfo {
+      padding-top: 4rem;
+      font-size: 1.4rem;
+      .title {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 60rem;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+      }
+      ul {
+        position: relative;
+
+        li {
+          position: relative;
+          margin: 1rem 0;
+          cursor: pointer;
+
+          .icon {
+            display: inline-block;
+            width: 3rem;
+            font-size: 1.8rem;
+            color: #03a9f4;
+          }
+          .text {
+            color: #a3bfcc;
+            font-size: 1.2rem;
+          }
+          span {
+            color: #fff;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+.education {
+  li {
+    margin-bottom: 1.5rem;
+  }
+
+  h5 {
+    color: #03a9f4;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  h4 {
+    color: #89b2c5;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: 0.2rem;
+    &:nth-child(1) {
+      color: #fff;
+      font-weight: 300;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+  }
+}
+.language {
+  .percent {
+    position: relative;
+    width: 100%;
+    height: 0.6rem;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 0.6rem;
+
+      background: #03a9f4;
+    }
+  }
+}
+
+//   =============================== right
+.right-side {
+  position: relative;
+  background: #fff;
+  padding: 4rem;
+
+  .about {
+    margin-bottom: 3rem;
+    h4 {
+      font-size: 1.3rem;
+    }
+    &::last-child {
+      margin-bottom: 0;
+    }
+
+    .title2 {
+      color: #003147;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #333;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .box {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0;
+    .text {
+      h4 {
+        width: 28rem;
+        text-transform: uppercase;
+        color: rgb(43, 112, 66);
+        font-size: 1.6rem;
+      }
+    }
+    .year_company {
+      min-width: 15rem;
+      color: #000000;
+      h4 {
+        font-weight: 800;
+        color: #000000;
+      }
+      h5 {
+        text-transform: uppercase;
+        color: #2e4955;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.skills {
+  .box {
+    position: relative;
+    width: 100%;
+    grid-template-columns: 15rem 1fr;
+    justify-content: space-between;
+    align-items: center;
+
+    h4 {
+      text-transform: uppercase;
+      color: #2e4955;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .percent {
+      position: relative;
+      width: 28rem;
+      height: 1rem;
+      @include desktop-and-higher {
+        width: 28rem;
+      }
+
+      background: #f0f0f0;
+
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: #03a9f4;
+      }
+    }
+  }
+}
+
+.interest {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    li {
+      color: #333;
+      font-weight: 500;
+
+      font-size: 1.5rem;
+      margin-top: 1.4rem;
+    }
+
+    i {
+      color: #03a9f4;
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.certif-list {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.link-movie {
+  li {
+    margin-bottom: 10px;
+    &:hover {
+      color: #003147;
+    }
+  }
+}
